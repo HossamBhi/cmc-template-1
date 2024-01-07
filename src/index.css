@@ -1,13 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	html {
+		--color-primary: #4285f4;
+		--color-primary-light: #5184d7;
+		--color-primary-dark: #0e46a0;
+		--color-secondary: #34a853;
+	}
+}
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
+		'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+
+	direction: rtl;
+	@apply bg-gray-100;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+.custom-button {
+	@apply mb-2 rounded-md border bg-primary px-4 py-2 font-bold text-white;
+}
+/* Custome input */
+.custom-input-container {
+	@apply flex flex-col gap-2 pb-2 relative;
+}
+.custom-input {
+	@apply rounded-sm border px-4 py-[6px];
+}
+.custom-input-error {
+	@apply border-red-500;
+}
+.custom-input-label {
+	@apply ltr:pr-2 rtl:pl-2;
+}
+/* Custome select */
+.custom-select-container {
+}
+
+.custom-select-label {
+	@apply rounded-md border px-4;
+}
+
+.custom-select {
+	@apply rounded-md border px-4;
+}
+
+.custom-select-option {
+	@apply rounded-md border px-4;
 }
